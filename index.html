@@ -51,7 +51,7 @@
         .contactHead{
             background: red;
             height: 10%;
-            width: 50%;
+            width: 100%;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
             border-radius: 50px;
@@ -75,23 +75,22 @@
                 background-color: #111111;
             }
             to{
-                width: 50%;
+                width: 100%;
                 height: 10%;
                 background-color:#AAAAAA;
-
             }
         }
 
         .educationHead{
             background: red;
             height: 10%;
-            width: 50%;
+            width: 100%;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
             border-radius: 50px;
             position: relative;
             animation-name: front-movement-education;
-            animation-duration: 3s;
+            animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-delay: 0s;
             animation-direction: alternate;
@@ -124,6 +123,8 @@
             padding: 15px;
             border-radius: 28px;
             box-shadow: 5px 5px 5px 5px black;
+            position: relative;
+            left: 20%;
         }
         .name, .mail{
             margin-left: 10px;
@@ -148,7 +149,7 @@
             padding: 10px;
             text-align: center;
             animation-name: in-out-12;
-            animation-duration: 10s;
+            animation-duration: 6s;
             animation-delay: 0s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -159,7 +160,7 @@
             padding: 10px;
             text-align: center;
             animation-name: in-out-12;
-            animation-duration: 10s;
+            animation-duration: 6s;
             animation-delay: 0s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -169,7 +170,7 @@
             padding: 10px;
             text-align: center;
             animation-name: in-out;
-            animation-duration: 10s;
+            animation-duration: 6s;
             animation-delay: 0s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -193,10 +194,99 @@
             }
             to{
                 border-radius: 50px;
-                background-color: #3D9970;
+                background-color: #17c0eb;
                 color:white;
                 box-shadow: -5px 10px 10px 5px #001f3f;
             }
+        }
+        .projects{
+            margin: 5px -20px;
+            padding: 20px;
+            width:100vw;
+            box-sizing: border-box;
+            font-family: arial, sans-serif;
+        }
+        .accordion{
+            background-color: #dfe6e9;
+            padding: 7px;
+        }
+        .accordion-tab{
+            margin: 2px 0;
+        }
+        .accordion-tab >label {
+            background-color: #be2edd;
+            padding: 20px 12px;
+            font-size: 16px;
+            display: block;
+            position: relative;
+            color: white;
+            cursor: pointer;
+        }
+        .accordion-tab > label::after{
+            content: "\f078";
+            font-family: fontawesome;
+            position: absolute;
+            top: 13px;
+            right: 20px;
+            transform: rotate(90deg);
+            transition: transform 0.4s;
+        }
+        .accordion-tab > .accordion-toggle:checked ~ label:after{
+            transform: rotate(0deg);
+        }
+        .accordion-tab > .accordion-content{
+            max-height: 0;
+            transition: all .4s;
+            overflow: hidden;
+        }
+        .accordion-tab > .accordion-toggle:checked ~ .accordion-content{
+            max-height: 100vh;
+            padding: 20px;
+        }
+        .accordion-tab .accordion-toggle{
+            display: none;
+        }
+
+        .skillContent{
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        .skillTab{
+            background-color: #ff7979;
+            margin: 5px 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 4px 4px 4px 4px #0652DD;
+        }
+        .certificateTab{
+            background-color: #4834d4;
+            margin: 15px 10px;
+            padding: 20px;
+            color: white;
+            width: 70%;
+            box-shadow: 4px 4px 4px 4px black;
+        }
+        .projectContent{
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            box-shadow: 4px 4px 10px 20px #808e9b;
+        }
+        .projectTab{
+            background-color: #ffd32a;
+            margin: 5px 5px;
+            padding: 10px 5px;
+            color: white;
+            font-size: 10px;
+            box-shadow: -4px -4px 4px 1px #18dcff;
+
         }
     </style>
 </head>
@@ -270,6 +360,188 @@
                     </span>
                 </div>
             </div>
+        </div>
+        <div class="projects">
+                <div class="accordion">
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle1">
+                        <label for="toggle1">SKILLS</label>
+                        <div class="accordion-content">
+                            <div class="skillContent">
+                                <div class="skillTab">
+                                    MACHINE LEARNING
+                                </div>
+                                <div class="skillTab">
+                                    WEB DEVELOPMENT
+                                </div>
+                                <div class="skillTab">
+                                    HTML
+                                </div>
+                                <div class="skillTab">
+                                    CSS
+                                </div>
+                                <div class="skillTab">
+                                    SQL
+                                </div>
+                                <div class="skillTab">
+                                    DJANGO
+                                </div>
+                                <div class="skillTab">
+                                    PYTHON (Programming Language)
+                                </div>
+                                <div class="skillTab">
+                                    C (Programming Language)
+                                </div>
+                                <div class="skillTab">
+                                    C++ (Programming Language)
+                                </div>
+                                <div class="skillTab">
+                                    OpenCV(basic)
+                                </div>
+                                <div class="skillTab">
+                                    Deep Learning
+                                </div>
+                                <div class="skillTab">
+                                    DS & Algorithm
+                                </div>
+                                <div class="skillTab">
+                                    JAVA (basic)
+                                </div>
+                                <div class="skillTab">
+                                    JAVASCRIPT (basic)
+                                </div>
+                                <div class="skillTab">
+                                    SELENIUM AUTOMATION (basic)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle2">
+                        <label for="toggle2">CERTIFICATES</label>
+                        <div class="accordion-content" style="position:relative; left:10%;">
+                            <div class="certificateTab">
+                                 Deep Learning: Image Recognition/Face Recognition <br>
+                                <i>Issued Date</i>:<b style="color:black;">(06/2020 - 06/2020)</b>
+                            </div>
+                            <div class="certificateTab">
+                                Certificate of Completion - Building and Deploying DeepLearning Applications with TensorFlow <br>
+                                <i>Issued Date</i>:<b style="color:black;">(06/2020 - 06/2020)</b>
+                            </div>
+                            <div class="certificateTab">
+                                Certificate of Completion - Convolutional Neural Network <br>
+                                <i>Issued Date</i>:<b style="color:black;">(11/2019 - 12/2019)</b>
+                            </div>
+                            <div class="certificateTab">
+                                OpenCV for Python Developers <br>
+                                <i>Issued Date</i>:<b style="color:black;">(06/2020 - 06/2020)</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle3">
+                        <label for="toggle3">PROJECTS</label>
+                        <div class="accordion-content">
+                            <div class="projectContent" style="color:black;">
+                                <div class="projectTab" style="font-size: 20px;color:black;">
+                                    Influencer Indexing <br>
+                                    <i style="font-size:15px;">(PYTHON | DJANGO | NLP| Automation)</i>
+                                    <br>
+                                    <p style="font-size:15px; color:white;">↠ Handled main challenge of collecting Dataset using Selenium Automation Tool</p>
+                                    <p style="font-size:15px; color:white;">↠ web app that predicts most favourable influencer for the user on basis of values entered by him/her
+                                        <br> <i class="fa fa-tint" aria-hidden="true" style="color:black;"></i> country<br>
+                                        <i class="fa fa-tint" aria-hidden="true" style="color:black;"></i> category<br>
+                                        <i class="fa fa-tint" aria-hidden="true" style="color:black;"></i> product description <br> related "@" and "#"</p>
+                                </div>
+                                <div class="projectTab" style="font-size: 20px;color:black;">
+                                    Online Tuition <br>
+                                    <i style="font-size:15px;">(PYTHON | DJANGO | NLP | PAYTM GATEWAY)</i>
+                                    <br>
+                                    <p style="font-size:15px; color:white;">↠ make an website keeping in mind the concept for making the coaching/tuition industry online.</p>
+                                    <p style="font-size:15px; color:white;">↠ django framework is use.</p>
+                                    <p style="font-size:15px; color:white;">↠ for reducing the server time of the website included AJAX/JQuery request so that real time DOM manipulation can be done with almost negligible amount of server time.</p>
+                                    <p style="font-size:15px; color:white;">↠ implement review analysis by student for teachers using the BAG of Words and stemming method of Natural Language Processing.</p>
+                                    <p style="font-size:15px; color:white;">↠ added payment gateway of PayTM.</p>
+                                </div>
+                                <div class="projectTab" style="font-size: 20px;color:black;">
+                                    Movie Recommendation System <br>
+                                    <i style="font-size:15px;">(PYTHON | ML | HTML | CSS | tmdb3 api)</i>
+                                    <br>
+                                    <p style="font-size:15px; color:white;">↠ using Machine Learning alogorithms for recommendataion of hollywood movies.</p>
+                                    <p style="font-size:15px; color:white;">↠ sentiment analysis for the reviews of the films provided in dataset.</p>
+                                    <p style="font-size:15px; color:white;">↠ downloaded films recent films using external API of tmdbv3api.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle4">
+                        <label for="toggle4">ACHIEVEMENTS</label>
+                        <div class="accordion-content" style="position:relative; left:10%;">
+                            <div class="certificateTab" style="background-color:#ff3838;">
+                                 First Position At JLUG2020 CODING COMPETITION. <br>
+                            </div>
+                            <div class="certificateTab"  style="background-color:#ff3838;">
+                                PROBLEM SETTER FOR HACKEREARTH OCTOBER CIRCUIT.<br>
+                            </div>
+                            <div class="certificateTab"  style="background-color:#ff3838;">
+                                First Position AT #DEFINE CODING COMPETITION OF BPIT,DELHI 2019.<br>
+                            </div>
+                            <div class="certificateTab"  style="background-color:#ff3838;">
+                                Fourth Position AT PES UNIVERSITY CODING COMPETITION 2019.
+                            </div>
+                            <div class="certificateTab"  style="background-color:#ff3838;">
+                                Fifth Position AT JIIT noida sec128 coding competition.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle5">
+                        <label for="toggle5">COMPETITIVE CODING RATING</label>
+                        <div class="accordion-content">
+                            <div class="projectContent" style="color:black;">
+                                <div class="projectTab" style="font-size: 20px;color:black; background-color:#33d9b2;box-shadow: 2px -2px 2px 2px #FFC312;">
+                                    CODEFORCES <br>
+                                    <i style="font-size:15px; color:#ff3838;">Rating : 1669 (Expert)</i>
+                                    <br>
+                                    <img src="codeforces_rating.JPG" width="350" height="350">
+                                    </div>
+                                <div class="projectTab" style="font-size: 20px;color:black; background-color:#33d9b2;box-shadow: 2px -2px 2px 2px #FFC312;">
+                                    CODECHEF <br>
+                                    <i style="font-size:15px; color:#ff3838;">Rating : 1789</i>
+                                    <br>
+                                    <img src="codechef_rating.JPG" width="350" height="350">
+                                </div>
+                                <div class="projectTab" style="font-size: 20px;color:black; background-color:#33d9b2;box-shadow: 2px -2px 2px 2px #FFC312;">
+                                    HACKEREARTH <br>
+                                    <i style="font-size:15px; color:#ff3838;">Rating : 1480</i>
+                                    <br>
+                                    <img src="hackerearth_rating.JPG" width="350" height="350">
+                                </div>
+                                <div class="projectTab" style="font-size: 20px;color:black; width:650px;position: relative;left:60%;background-color:#33d9b2;box-shadow: 2px -2px 2px 2px #FFC312;">
+                                    STOPSTALK <br>
+                                    <br>
+                                    <img src="stopstalk.JPG" width="600" height="150">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle6">
+                        <label for="toggle6">WORK EXPERIENCE</label>
+                        <div class="accordion-content" style="position:relative; left:30%;width:40%;">
+                            <div class="certificateTab" style=" box-shadow: 4px 4px 15px 10px #ff3838; ">
+                                 Data Analyst Trainee <br>
+                                <i>Duration Date</i>:<b style="color:black;"> (05/2020 - 07/2020)</b>
+                                <p> <i class="fa fa-arrow-right" aria-hidden="true"></i> Data Extraction/Collection<br>
+                                   <i class="fa fa-arrow-right" aria-hidden="true"></i> Data Exploration and Transformation<br>
+                                   <i class="fa fa-arrow-right" aria-hidden="true"></i> Predictive Modeling<br>
+                                   <i class="fa fa-arrow-right" aria-hidden="true"></i> 100% score in Training<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </body>
