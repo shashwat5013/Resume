@@ -238,6 +238,12 @@
         .accordion-tab > .accordion-toggle:checked ~ label:after{
             transform: rotate(0deg);
         }
+        .accordion-tab > .accordion-toggle:checked ~ label{
+            background-color: #26de81;
+            color:#d1d8e0;
+            font-size: 21pt;
+            text-align: center;
+        }
         .accordion-tab > .accordion-content{
             max-height: 0;
             transition: all .4s;
@@ -292,6 +298,12 @@
             box-shadow: -4px -4px 4px 1px #18dcff;
 
         }
+        .toggle1:hover, .toggle2:hover, .toggle3:hover , .toggle4:hover ,.toggle5:hover ,.toggle6:hover {
+            background-color: black;
+            color:orange;
+            font-size: 21pt;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -324,6 +336,12 @@
                 <i class="fa fa-linkedin fa-2x">
                     <div class="mail">
                         <a href="https://www.linkedin.com/in/shashwat-singh-25a10a185/">linkedin.com/in/shashwat-singh-25a10a185/</a>
+                    </div>
+                </i>
+                <br>
+                <i class="fa fa-id-card-o fa-2x">
+                    <div class="mail">
+                        <a href="https://shashwat5013.github.io/Resume/">Website Link</a>
                     </div>
                 </i>
             </div>
@@ -369,7 +387,7 @@
                 <div class="accordion">
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle1">
-                        <label for="toggle1">SKILLS</label>
+                        <label for="toggle1" class="toggle1" >SKILLS</label>
                         <div class="accordion-content">
                             <div class="skillContent">
                                 <div class="skillTab">
@@ -422,7 +440,7 @@
                     </div>
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle2">
-                        <label for="toggle2">CERTIFICATES</label>
+                        <label for="toggle2" class="toggle2">CERTIFICATES</label>
                         <div class="accordion-content" style="position:relative; left:10%;">
                             <div class="certificateTab">
                                  Deep Learning: Image Recognition/Face Recognition <br>
@@ -444,7 +462,7 @@
                     </div>
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle3">
-                        <label for="toggle3">PROJECTS</label>
+                        <label for="toggle3" class="toggle3">PROJECTS</label>
                         <div class="accordion-content">
                             <div class="projectContent" style="color:black;">
                                 <div class="projectTab" style="font-size: 20px;color:black;">
@@ -480,7 +498,7 @@
                     </div>
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle4">
-                        <label for="toggle4">ACHIEVEMENTS</label>
+                        <label for="toggle4" class="toggle4">ACHIEVEMENTS</label>
                         <div class="accordion-content" style="position:relative; left:10%;">
                             <div class="certificateTab" style="background-color:#ff3838;">
                                  First Position At JLUG2020 CODING COMPETITION. <br>
@@ -501,7 +519,7 @@
                     </div>
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle5">
-                        <label for="toggle5">COMPETITIVE CODING RATING</label>
+                        <label for="toggle5" class="toggle5">COMPETITIVE CODING RATING</label>
                         <div class="accordion-content">
                             <div class="projectContent" style="color:black;">
                                 <div class="projectTab" style="font-size: 20px;color:black; background-color:#33d9b2;box-shadow: 2px -2px 2px 2px #FFC312;">
@@ -532,7 +550,7 @@
                     </div>
                     <div class="accordion-tab">
                         <input type="checkbox" name="toggle" class="accordion-toggle" id="toggle6">
-                        <label for="toggle6">WORK EXPERIENCE</label>
+                        <label for="toggle6" class="toggle6">WORK EXPERIENCE</label>
                         <div class="accordion-content" style="position:relative; left:30%;width:40%;">
                             <div class="certificateTab" style=" box-shadow: 4px 4px 15px 10px #ff3838; ">
                                  Data Analyst Trainee <br>
